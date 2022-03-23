@@ -1,13 +1,12 @@
-import './App.css';
-import Navigation from './screens/navigationBar/NavigationBar'
+import { Form } from "react-bootstrap";
+import "./App.css";
+import Navigation from "./screens/navigationBar/NavigationBar";
 
 function App() {
   return (
     <div className="App">
-    <Navigation/>
-      
+      <Navigation />
     </div>
   );
 }
-
 export default App;
