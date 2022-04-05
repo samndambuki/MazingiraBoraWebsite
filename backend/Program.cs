@@ -122,6 +122,101 @@ app.MapDelete("/delete-loggedinuser-by-userName/{userName}",async(string UserNam
     }
 }).WithTags("LOGIN ENDPOINTS");
 
+app.MapGet("/get-all-nominees",async ()=> await NomineeRepository.GetNomineesAsync())
+.WithTags("NOMINEE ENDPOINTS");
+
+app.MapGet("/get-nominee-by-NomineeUserName/{NomineeUserName}",async(string NomineeUserName) =>{
+    Nominees  nomineeToReturn = await NomineeRepository.GetNomineeByNomineeUserNameAsync(NomineeUserName);
+    if (nomineeToReturn != null)
+    {
+        return Results.Ok(nomineeToReturn);
+    }
+    else{
+        return Results.BadRequest();
+    }
+}).WithTags("NOMINEE ENDPOINTS");
+
+app.MapPost("/create-nominee-by-NomineeUserName/{NomineeUserName}",async(Nominees nomineeToCreate) =>{
+    bool createSucessful = await NomineeRepository.CreateNomineeAsync(nomineeToCreate);
+    if (createSucessful)
+    {
+        return Results.Ok("Create Successful");
+    }
+    else{
+        return Results.BadRequest();
+    }
+}).WithTags("NOMINEE ENDPOINTS");
+
+app.MapPut("/update-nominee",async(Nominees nomineeToUpdate) =>{
+    bool updateSucessful = await NomineeRepository.UpdateNomineeAsync(nomineeToUpdate);
+    if (updateSucessful)
+    {
+        return Results.Ok("Update Successful");
+    }
+    else{
+        return Results.BadRequest();
+    }
+}).WithTags("NOMINEE ENDPOINTS");
+
+app.MapDelete("/delete-nominee-by-NomineeUserName/{NomineeUserName}",async(string NomineeUserName) =>{
+    bool deleteSucessful = await NomineeRepository.DeleteNomineeAsync(NomineeUserName);
+    if (deleteSucessful)
+    {
+        return Results.Ok("Delete Successful");
+    }
+    else{
+        return Results.BadRequest();
+    }
+}).WithTags("NOMINEE ENDPOINTS");
+
+app.MapGet("/get-all-voters",async ()=> await VoterRepository.GetVotersAsync())
+.WithTags("VOTER ENDPOINTS");
+
+app.MapGet("/get-voter-by-VoterUserName/{VoterUserName}",async(string VoterUserName) =>{
+    Voter  voterToReturn = await VoterRepository.GetVoterByVoterUserNameAsync(VoterUserName);
+    if (voterToReturn != null)
+    {
+        return Results.Ok(voterToReturn);
+    }
+    else{
+        return Results.BadRequest();
+    }
+}).WithTags("VOTER ENDPOINTS");
+
+app.MapPost("/create-voter-by-VoterUserName/{VoterUserName}",async(Voter voterToCreate) =>{
+    bool createSucessful = await VoterRepository.CreateVoterAsync(voterToCreate);
+    if (createSucessful)
+    {
+        return Results.Ok("Create Successful");
+    }
+    else{
+        return Results.BadRequest();
+    }
+}).WithTags("VOTER ENDPOINTS");
+
+app.MapPut("/update-voter",async(Voter voterToUpdate) =>{
+    bool updateSucessful = await VoterRepository.UpdateVoterAsync(voterToUpdate);
+    if (updateSucessful)
+    {
+        return Results.Ok("Update Successful");
+    }
+    else{
+        return Results.BadRequest();
+    }
+}).WithTags("VOTER ENDPOINTS");
+
+app.MapDelete("/delete-voter-by-VoterUserName/{VoterUserName}",async(string VoterUserName) =>{
+    bool deleteSucessful = await VoterRepository.DeleteVoterAsync(VoterUserName);
+    if (deleteSucessful)
+    {
+        return Results.Ok("Delete Successful");
+    }
+    else{
+        return Results.BadRequest();
+    }
+}).WithTags("VOTER ENDPOINTS");
+
+
 app.UseAuthorization();
 
 app.MapControllers();

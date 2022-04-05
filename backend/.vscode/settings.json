@@ -1,0 +1,4 @@
+{
+ "appService.defaultWebAppToDeploy": "/subscriptions/2c058d4a-d599-49f9-af28-7d7ba3be20d4/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/MazingiraBoraWebsite",
+ "appService.deploySubpath": "publish"
+}
