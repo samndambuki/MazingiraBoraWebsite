@@ -1,0 +1,168 @@
+.signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .innersegmentsp{
+    width: 60vw;
+    height: 82vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+
+
+  }
+
+  .signup1{
+    width: 50%;
+    height: 82vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(240, 248, 255, 0.842);
+
+    text-align: center;
+    margin-top: -140px;
+   
+    
+  }
+
+  
+  .fm{
+    display: flex;
+    flex-direction: column;
+    height: 82vh;
+  }
+
+
+  .email{
+    width: 20vw;
+    height: 6vh;
+    border-radius: 4px;
+  }
+
+  .password{
+    width: 20vw;
+    height: 6vh;
+    border-radius: 4px;
+  }
+  
+  .username{
+    width: 20vw;
+    height: 6vh;
+    border-radius: 4px;
+  }
+  
+  .fullname{
+    width: 20vw;
+    height: 6vh;
+    border-radius: 4px;
+  }
+  
+  .phonenumber{
+    width: 20vw;
+    height: 6vh;
+    border-radius: 4px;
+  }
+
+  .btn2{
+    color: blue;
+    text-decoration: underline;
+
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    .signup{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      max-width: 100vw;
+      flex-direction: column;
+      margin-top: 0px;
+    }
+    .innersegmentsp{
+      width: 100vw;
+      height: 82vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 60px;
+  
+  
+    }
+  
+    .signup1{
+      width: 100%;
+      height: 82vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: rgba(240, 248, 255, 0.842);
+  
+      text-align: center;
+      margin-top: -140px;
+     
+      
+    }
+  
+    
+    .fm{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      height: 82vh;
+      width: 100%;
+    }
+  
+  
+    .email{
+      width: 80vw;
+      height: 6vh;
+      border-radius: 4px;
+    }
+  
+    .password{
+      width: 80vw;
+      height: 6vh;
+      border-radius: 4px;
+    }
+    
+    .username{
+      width: 80vw;
+      height: 6vh;
+      border-radius: 4px;
+    }
+    
+    .fullname{
+      width: 80vw;
+      height: 6vh;
+      border-radius: 4px;
+    }
+    
+    .phonenumber{
+      width: 80vw;
+      height: 6vh;
+      border-radius: 4px;
+    }
+  
+    .btnsubmit{
+      width: 40vw;
+      color: blue;
+      text-decoration: none;
+  
+    }
+
+  }

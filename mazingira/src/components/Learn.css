@@ -1,0 +1,168 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+ }
+  
+  
+.L2 {
+    display: flex;
+    flex-direction: column;
+}
+.L5 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10vh;
+}
+.L6 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10vh;
+}
+.L13 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10vh;
+}
+.L14 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10vh;
+}
+.L7 {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    height: 50vh;
+    width: 40vw;
+    margin-right: 10vw;
+}
+
+.L15 {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  height: 50vh;
+  width: 40vw;
+  margin-right: 10vw;
+}
+
+.L8 {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    height: 50vh;
+    width: 40vw;
+} 
+
+.L16 {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  height: 50vh;
+  width: 40vw;
+} 
+
+.L9 {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    height: 50vh;
+    width: 40vw;
+    margin-right: 10vw;
+} 
+
+.L17 {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  height: 50vh;
+  width: 40vw;
+  margin-right: 10vw;
+}
+
+
+
+.L10 {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    height: 50vh;
+    width: 40vw;
+}  
+
+
+.L18 {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  height: 50vh;
+  width: 40vw;
+} 
+
+
+  @media only screen and (max-width: 768px) {
+    body {
+      max-width: 100vw;
+      }
+    
+    .maind {
+      display: flex;
+      flex-direction: column;
+      min-height: 40vh;
+      max-width: 100vw;
+      position: relative;  }
+    
+    
+    .Aboutus {
+      display: flex;
+      flex-direction: column;
+      height: 40vh;
+      max-width: 100vw;
+      margin-top: -200px;
+      }
+    
+    
+    .innseg{
+      display: flex;
+      flex-direction: column;
+      max-width: 100vw;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+    .onecol{
+      background-color: rgba(240, 248, 255, 0.842);
+      max-width:100vw ;
+      justify-content: center;
+      align-content: center;
+      padding: 10px;
+    }
+  
+    .twocol{
+      background-color: rgba(240, 248, 255, 0.842);
+      max-width: 100vw;
+      padding: 10px;
+    }
+    .abtt{
+  max-width: 100vw;
+  height: 30vh;
+    }
+  
+    .centext1{
+      color: rgb(9, 9, 85);
+      justify-content: center;
+      align-content: center;
+      padding-left: 10px;
+    }
+  
+    .centext2{
+      color: rgb(9, 9, 85);
+      justify-content: center;
+      align-content: center;
+      padding-left: 10px;
+    }
+  
+  }
