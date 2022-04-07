@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore;
 public class UserDetailsRepository{
  public async static Task<List<SignUp>>GetUserDetailsAsync(){
   using(var db = new MazingiraDbContext()){
-   return await db.SignUpDetails.ToListAsync();
+   return await db.Users.ToListAsync();
   }
  }
  public async static Task <SignUp> GetUserByUserNameAsync(string UserName)
  {
 
   using(var db = new MazingiraDbContext() ){
-   return await db.SignUpDetails.FirstOrDefaultAsync(user => user.UserName == UserName);
+   return await db.Users.FirstOrDefaultAsync(user => user.UserName == UserName);
   }
  }
 
@@ -20,7 +20,7 @@ public class UserDetailsRepository{
   using(var db = new MazingiraDbContext()){
    try
    {
-    await db.SignUpDetails.AddAsync(userToCreate);
+    await db.Users.AddAsync(userToCreate);
     return await db.SaveChangesAsync() >= 1;
     
    }
@@ -36,7 +36,7 @@ public class UserDetailsRepository{
   using(var db = new MazingiraDbContext()){
    try
    {
-    db.SignUpDetails.Update(userToUpdate);
+    db.Users.Update(userToUpdate);
     return await db.SaveChangesAsync() >= 1;
     
    }

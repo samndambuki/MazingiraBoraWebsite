@@ -28,10 +28,10 @@ var app = builder.Build();
 
 app.UseHttpsRedirection();
 
-app.MapGet("/get-all-users",async ()=> await UserDetailsRepository.GetUserDetailsAsync())
-.WithTags("SIGNUP ENDPOINTS");
+app.MapGet("/users",async ()=> await UserDetailsRepository.GetUserDetailsAsync())
+.WithTags("USERS ENDPOINTS");
 
-app.MapGet("/get-user-by-userName/{UserName}",async(string UserName) =>{
+app.MapGet("/users/{UserName}",async(string UserName) =>{
     SignUp  userToReturn = await UserDetailsRepository.GetUserByUserNameAsync(UserName);
     if (userToReturn != null)
     {
@@ -40,9 +40,9 @@ app.MapGet("/get-user-by-userName/{UserName}",async(string UserName) =>{
     else{
         return Results.BadRequest();
     }
-}).WithTags("SIGNUP ENDPOINTS");
+}).WithTags("USERS ENDPOINTS");
 
-app.MapPost("/create-user-by-userName/{UserName}",async(SignUp userToCreate) =>{
+app.MapPost("/users",async(SignUp userToCreate) =>{
     bool createSucessful = await UserDetailsRepository.CreateUserAsync(userToCreate);
     if (createSucessful)
     {
@@ -51,9 +51,9 @@ app.MapPost("/create-user-by-userName/{UserName}",async(SignUp userToCreate) =>{
     else{
         return Results.BadRequest();
     }
-}).WithTags("SIGNUP ENDPOINTS");
+}).WithTags("USERS ENDPOINTS");
 
-app.MapPut("/update-user",async(SignUp userToUpdate) =>{
+app.MapPut("/users",async(SignUp userToUpdate) =>{
     bool updateSucessful = await UserDetailsRepository.UpdateUserAsync(userToUpdate);
     if (updateSucessful)
     {
@@ -62,9 +62,9 @@ app.MapPut("/update-user",async(SignUp userToUpdate) =>{
     else{
         return Results.BadRequest();
     }
-}).WithTags("SIGNUP ENDPOINTS");
+}).WithTags("USERS ENDPOINTS");
 
-app.MapDelete("/delete-user-by-userName/{userName}",async(string UserName) =>{
+app.MapDelete("/users/{userName}",async(string UserName) =>{
     bool deleteSucessful = await UserDetailsRepository.DeleteUserAsync(UserName);
     if (deleteSucessful)
     {
@@ -73,23 +73,10 @@ app.MapDelete("/delete-user-by-userName/{userName}",async(string UserName) =>{
     else{
         return Results.BadRequest();
     }
-}).WithTags("SIGNUP ENDPOINTS");
+}).WithTags("USERS ENDPOINTS");
 
-app.MapGet("/get-all-loggedinusers",async ()=> await LoginDetailsRepository.GetLoggedInUsersAsync())
-.WithTags("LOGIN ENDPOINTS");
 
-app.MapGet("get-loggedinusers-by-userName{UserName}",async(string UserName)=>{
-    Login  loginToReturn = await LoginDetailsRepository.GetLoggedInUserByUserNameAsync(UserName);
-    if (loginToReturn != null)
-    {
-        return Results.Ok(loginToReturn);
-    }
-    else{
-        return Results.BadRequest();
-    }
-}).WithTags("LOGIN ENDPOINTS");
-
-app.MapPost("/create-login-by-userName/{UserName}",async(Login loginToCreate) =>{
+app.MapPost("/userlogin",async(SignUp loginToCreate) =>{
     bool createSucessful = await LoginDetailsRepository.CreateLoginAsync(loginToCreate);
     if (createSucessful)
     {
@@ -98,34 +85,13 @@ app.MapPost("/create-login-by-userName/{UserName}",async(Login loginToCreate) =>
     else{
         return Results.BadRequest();
     }
-}).WithTags("LOGIN ENDPOINTS");
+}).WithTags("USERS ENDPOINTS");
 
-app.MapPut("/update-login",async(Login loginToUpdate) =>{
-    bool updateSucessful = await LoginDetailsRepository.UpdateLoginAsync(loginToUpdate);
-    if (updateSucessful)
-    {
-        return Results.Ok("Update Successful");
-    }
-    else{
-        return Results.BadRequest();
-    }
-}).WithTags("LOGIN ENDPOINTS");
 
-app.MapDelete("/delete-loggedinuser-by-userName/{userName}",async(string UserName) =>{
-    bool deleteSucessful = await LoginDetailsRepository.DeleteLoginAsync(UserName);
-    if (deleteSucessful)
-    {
-        return Results.Ok("Delete Successful");
-    }
-    else{
-        return Results.BadRequest();
-    }
-}).WithTags("LOGIN ENDPOINTS");
-
-app.MapGet("/get-all-nominees",async ()=> await NomineeRepository.GetNomineesAsync())
+app.MapGet("/nominees",async ()=> await NomineeRepository.GetNomineesAsync())
 .WithTags("NOMINEE ENDPOINTS");
 
-app.MapGet("/get-nominee-by-NomineeUserName/{NomineeUserName}",async(string NomineeUserName) =>{
+app.MapGet("/nominees/{NomineeUserName}",async(string NomineeUserName) =>{
     Nominees  nomineeToReturn = await NomineeRepository.GetNomineeByNomineeUserNameAsync(NomineeUserName);
     if (nomineeToReturn != null)
     {
@@ -136,7 +102,7 @@ app.MapGet("/get-nominee-by-NomineeUserName/{NomineeUserName}",async(string Nomi
     }
 }).WithTags("NOMINEE ENDPOINTS");
 
-app.MapPost("/create-nominee-by-NomineeUserName/{NomineeUserName}",async(Nominees nomineeToCreate) =>{
+app.MapPost("/nominees",async(Nominees nomineeToCreate) =>{
     bool createSucessful = await NomineeRepository.CreateNomineeAsync(nomineeToCreate);
     if (createSucessful)
     {
@@ -147,7 +113,7 @@ app.MapPost("/create-nominee-by-NomineeUserName/{NomineeUserName}",async(Nominee
     }
 }).WithTags("NOMINEE ENDPOINTS");
 
-app.MapPut("/update-nominee",async(Nominees nomineeToUpdate) =>{
+app.MapPut("/nominees",async(Nominees nomineeToUpdate) =>{
     bool updateSucessful = await NomineeRepository.UpdateNomineeAsync(nomineeToUpdate);
     if (updateSucessful)
     {
@@ -158,7 +124,7 @@ app.MapPut("/update-nominee",async(Nominees nomineeToUpdate) =>{
     }
 }).WithTags("NOMINEE ENDPOINTS");
 
-app.MapDelete("/delete-nominee-by-NomineeUserName/{NomineeUserName}",async(string NomineeUserName) =>{
+app.MapDelete("/nominees/{NomineeUserName}",async(string NomineeUserName) =>{
     bool deleteSucessful = await NomineeRepository.DeleteNomineeAsync(NomineeUserName);
     if (deleteSucessful)
     {
@@ -169,10 +135,10 @@ app.MapDelete("/delete-nominee-by-NomineeUserName/{NomineeUserName}",async(strin
     }
 }).WithTags("NOMINEE ENDPOINTS");
 
-app.MapGet("/get-all-voters",async ()=> await VoterRepository.GetVotersAsync())
+app.MapGet("/voters",async ()=> await VoterRepository.GetVotersAsync())
 .WithTags("VOTER ENDPOINTS");
 
-app.MapGet("/get-voter-by-VoterUserName/{VoterUserName}",async(string VoterUserName) =>{
+app.MapGet("/voters/{VoterUserName}",async(string VoterUserName) =>{
     Voter  voterToReturn = await VoterRepository.GetVoterByVoterUserNameAsync(VoterUserName);
     if (voterToReturn != null)
     {
@@ -183,7 +149,7 @@ app.MapGet("/get-voter-by-VoterUserName/{VoterUserName}",async(string VoterUserN
     }
 }).WithTags("VOTER ENDPOINTS");
 
-app.MapPost("/create-voter-by-VoterUserName/{VoterUserName}",async(Voter voterToCreate) =>{
+app.MapPost("/voters",async(Voter voterToCreate) =>{
     bool createSucessful = await VoterRepository.CreateVoterAsync(voterToCreate);
     if (createSucessful)
     {
@@ -194,7 +160,7 @@ app.MapPost("/create-voter-by-VoterUserName/{VoterUserName}",async(Voter voterTo
     }
 }).WithTags("VOTER ENDPOINTS");
 
-app.MapPut("/update-voter",async(Voter voterToUpdate) =>{
+app.MapPut("/voters",async(Voter voterToUpdate) =>{
     bool updateSucessful = await VoterRepository.UpdateVoterAsync(voterToUpdate);
     if (updateSucessful)
     {
@@ -205,7 +171,7 @@ app.MapPut("/update-voter",async(Voter voterToUpdate) =>{
     }
 }).WithTags("VOTER ENDPOINTS");
 
-app.MapDelete("/delete-voter-by-VoterUserName/{VoterUserName}",async(string VoterUserName) =>{
+app.MapDelete("/voters/{VoterUserName}",async(string VoterUserName) =>{
     bool deleteSucessful = await VoterRepository.DeleteVoterAsync(VoterUserName);
     if (deleteSucessful)
     {

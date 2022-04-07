@@ -3,8 +3,7 @@ using Microsoft.EntityFrameworkCore;
 namespace MazingiraBora.Data{
 
 public class MazingiraDbContext: DbContext{
- public DbSet <SignUp> SignUpDetails { get; set; }
- public DbSet <Login> LoginDetails {get;set;}
+ public DbSet <SignUp> Users { get; set; }
  public DbSet <Nominees> NomineesTable {get;set;}
  public DbSet <Voter>Voters {get;set;}
 
