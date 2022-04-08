@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
+namespace MazingiraBora.Models{
 public class SignUp{
 
  [Required]
@@ -25,4 +26,5 @@ public class SignUp{
  [MaxLength(20)]
  public string Password { get; set; }  = string.Empty;
 
+}
 }

@@ -1,7 +1,9 @@
 using MazingiraBora.Data;
-using Microsoft.EntityFrameworkCore;
+using MazingiraBora.Models;
 
-public class LoginDetailsRepository{
+
+public class LoginDetailsRepository 
+{
  public async static Task<bool> CreateLoginAsync(SignUp loginToCreate)
  {
   using(var db = new MazingiraDbContext()){

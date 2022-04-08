@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
+namespace MazingiraBora.Models{
 public class Voter{
 
  [Required]
@@ -24,4 +25,5 @@ public class Voter{
  [MaxLength(50)]
  public string NomineeUserName { get; set; } = string.Empty;
 
+}
 }

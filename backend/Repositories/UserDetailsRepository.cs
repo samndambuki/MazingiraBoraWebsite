@@ -1,4 +1,5 @@
 using MazingiraBora.Data;
+using MazingiraBora.Models;
 using Microsoft.EntityFrameworkCore;
 
 public class UserDetailsRepository{

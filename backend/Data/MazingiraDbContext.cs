@@ -1,6 +1,8 @@
+using MazingiraBora.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace MazingiraBora.Data{
+namespace MazingiraBora.Data
+{
 
 public class MazingiraDbContext: DbContext{
  public DbSet <SignUp> Users { get; set; }

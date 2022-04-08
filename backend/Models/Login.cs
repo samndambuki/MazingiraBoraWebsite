@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-
+namespace MazingiraBora.Models{
 public class Login{
 
  [Required]
@@ -12,5 +12,5 @@ public class Login{
  [Required]
  [MaxLength(20)]
  public string Password {get;set;} = string.Empty;
-
+}
 }

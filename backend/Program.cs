@@ -1,6 +1,8 @@
+using MazingiraBora.Models;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 
@@ -77,6 +79,7 @@ app.MapDelete("/users/{userName}",async(string UserName) =>{
 
 
 app.MapPost("/userlogin",async(SignUp loginToCreate) =>{
+   
     bool createSucessful = await LoginDetailsRepository.CreateLoginAsync(loginToCreate);
     if (createSucessful)
     {
