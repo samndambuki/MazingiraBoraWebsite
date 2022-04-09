@@ -1,6 +1,11 @@
 C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\publish\backend.exe
+C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\publish\publish\web.config
 C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\publish\appsettings.Development.json
 C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\publish\appsettings.json
+C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\publish\publish\appsettings.Development.json
+C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\publish\publish\appsettings.json
+C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\publish\publish\backend.deps.json
+C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\publish\publish\backend.runtimeconfig.json
 C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\publish\backend.dll
 C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\publish\backend.runtimeconfig.json
 C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\publish\backend.pdb

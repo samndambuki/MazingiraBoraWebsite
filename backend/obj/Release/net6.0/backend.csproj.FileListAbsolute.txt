@@ -59,3 +59,8 @@ C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\obj\Release\net6.0\backen
 C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\obj\Release\net6.0\ref\backend.dll
 C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\obj\Release\net6.0\backend.pdb
 C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\obj\Release\net6.0\backend.genruntimeconfig.cache
+C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\bin\Release\net6.0\publish\web.config
+C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\bin\Release\net6.0\publish\appsettings.Development.json
+C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\bin\Release\net6.0\publish\appsettings.json
+C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\bin\Release\net6.0\publish\backend.deps.json
+C:\Users\SUN\source\repos\MazingiraBoraWebsite\backend\bin\Release\net6.0\publish\backend.runtimeconfig.json
